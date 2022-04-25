@@ -1,0 +1,335 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+  @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+  .invoices-pdf-container > th,
+  .invoices-pdf-container td,
+  .invoices-pdf-container > tr,
+  .invoices-pdf-container table {
+    border: unset !important;
+  }
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  /* MAIN invoices Container  */
+  .invoices-pdf-container {
+    color: #ffffff;
+  }
+  /* Main invoices Table Container */
+  .invoices-pdf-table {
+    border: unset !important;
+  }
+
+  /* Main invoices BODY */
+  .invoices-pdf-table__body {
+    padding: 0;
+  }
+
+  .invoices-pdf-table__header {
+    padding-bottom: 15px;
+  }
+
+  /* Header */
+  .invoices-pdf-table__header td {
+    padding: 18px 0px;
+  }
+
+  .invoices-pdf-table__header--logo {
+    display: inline-block;
+    width: 75px;
+    place-self: center;
+  }
+  .invoices-pdf-table__header--logo img {
+    display: inline-block;
+  }
+  /* Subheader */
+  tr.invoices-pdf-table__subheader {
+    border: unset;
+  }
+  td.invoices-pdf-table__subheader--name {
+    border: unset;
+  }
+  .invoices-pdf-table__subheader--reference h3 {
+    text-align: right;
+  }
+  .invoices-pdf-table__subheader--reference,
+  .invoices-pdf-table__subheader--name {
+    padding: 20px 0;
+  }
+
+  .invoices-pdf-table__actions {
+    padding: 20px 0;
+    display: none;
+  }
+
+  .invoices-pdf-table__add-button {
+    background: #f58845;
+    color: white !important;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  .invoices-pdf-table__view-button {
+    background: white;
+    border: 1px solid #f58845;
+    color: #f58845 !important;
+    padding: 10px 30px;
+    border-radius: 6px;
+  }
+
+  /* Main invoices Utilities */
+  .invoices-pdf--block {
+    display: block;
+  }
+  .invoices-pdf--before {
+    page-break-before: always;
+  }
+  .invoices-pdf--after {
+    page-break-after: always;
+  }
+  .invoices-pdf--avoid {
+    page-break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    margin: unset;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  .invoices-pdf--bold {
+    font-weight: 900;
+  }
+  .invoices-pdf--text {
+    padding-bottom: 10px;
+  }
+  .invoices-pdf--text-right {
+    text-align: right;
+  }
+  .invoices-pdf--text-left {
+    text-align: left;
+  }
+  .invoices-pdf--text-center {
+    text-align: center;
+  }
+  .invoices-pdf-description {
+    margin-top: 10px !important;
+    padding-bottom: 15px;
+  }
+  .invoices-pdf__products-table {
+    margin-top: 10px !important;
+  }
+  .invoices-pdf--orange {
+    color: #f58845 !important;
+  }
+  .invoices-pdf--black {
+    color: #000000 !important;
+  }
+  .invoices-pdf--text-pricing {
+    padding: 10px 0;
+  }
+  .no-border {
+    border: none;
+  }
+  table.invoices-pdf__products-table {
+    border: none;
+  }
+  .invoices-pdf__products-table tbody {
+    border: none;
+  }
+  .invoices-pdf__products-table th {
+    padding: 10px 0px !important;
+    border: none;
+    font-weight: 900;
+  }
+  .invoices-pdf__products-table tr {
+    border: none;
+  }
+
+  #show-pdf-buyer .invoices-pdf-table__action {
+    display: block;
+  }
+
+  #show-pdf-buyer .invoices-pdf-table__action a {
+    pointer-events: auto !important;
+  }
+
+  .invoices-pdf-container a {
+    text-decoration: none !important;
+    color: black;
+    font-size: 16px;
+  }
+  .invoices-pdf-container a {
+    pointer-events: none;
+  }
+  .invoices-pdf_top-padding {
+    padding-top: 35px;
+  }
+  .invoices-pdf_top-padding-20 {
+    padding-top: 15px;
+  }
+</style>
+
+<!-- Body Start -->
+<body>
+  <!-- TABLE START  -->
+  <div id="invoices-pdf-container" class="invoices-pdf-container">
+    <table
+      class="invoices-pdf-table"
+      cellpadding="15"
+      cellspacing="0"
+      width="650"
+      style="margin: auto; overflow-y: hidden; border: 1px solid black"
+    >
+      <!-- Table BODY START-->
+      <tbody class="invoices-pdf-table__body">
+        <!-- Exporta Logo and Exporta Information -->
+
+        <!-- Table Header -->
+        <tr class="invoices-pdf-table__header">
+          <td>
+            <img
+              alt="exporta logo"
+              src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
+              style="width: 218px; height: 58px; place-self: center"
+            />
+          </td>
+
+          <td></td>
+          <!-- Exporta Information -->
+          <td style="vertical-align: middle">
+            <h3 style="text-align: right; font-size: 16px" class="invoices-pdf--block invoices-pdf--black">Exporta Technologies</h3>
+            <h3 style="text-align: right; font-size: 16px" class="invoices-pdf--block invoices-pdf--black">716 McGill Pl NE</h3>
+            <h3 style="text-align: right; font-size: 16px" class="invoices-pdf--block invoices-pdf--black">Atlanta, GA 30312</h3>
+          </td>
+        </tr>
+
+        <!-- Table Header -->
+
+        <!-- Invoices Table START -->
+        <tr>
+            <td colspan=12 class="invoices-pdf_top-padding">
+              <table
+              class="invoices-pdf__products-table"
+              border="1"
+              cellpadding="20"
+              cellspacing="0"
+              width="100%"
+              style="margin: auto"
+              >
+                <tbody>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Invoice ID</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's unique id</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Date</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Creation Date:formatted as 4/25/22</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Name</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Var - Buyer Company's Company_General_Information's Primary User Name</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Email</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Var - Buyer Company's Company_General_Information's Company Representative Email</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Phone Number</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Var - Buyer Company's Company_General_Information's Company Phone Number</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Country</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Var - Buyer Company's Company_General_Information's Location - Country</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Transaction Date</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Date Invoice was Paid</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Payment Method</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Payment Method's Type Name EN</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%">Status</th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Status</td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="35%"> </th>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black"> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table
+              class="invoices-pdf__products-table"
+              border="1"
+              cellpadding="20"
+              cellspacing="0"
+              width="100%"
+              style="margin: auto"
+              >
+                <tbody>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="55%">Invoice Description</th>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header">Amount</th>
+                  </tr>
+                  <tr>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%">Subscription Fee (Browser Plan)</td>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Total Fees Amount:formatted as $1028.58</td>
+                  </tr>
+                  <tr>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%">Credit Card Fee (2.9% + 0.3 USD)</td>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Credit Card Fee Amount:formatted as $1028.58</td>
+                  </tr>
+                  <tr>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%"> </td>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black"> </td>
+                  </tr>
+                  <tr>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="50%">Total Amount</th>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header">Parent group's Invoice's Total Amount:formatted as $1028.58</th>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+        </tr>
+        Parent group's Buyer Order's Order_Incoterms:count > 0:formatted as text
+        <!-- Invoices Table END -->
+       <tr class="invoices-pdf-signature-main" style="display: none">
+          <td width="auto" style="padding-top: 40px">
+            <div
+              class="invoices-pdf-signature"
+              style="
+                display: inline-block;
+                margin-bottom: 5px;
+                color: black;
+                font-family: 'Caveat', cursive;
+                font-size: 26px;
+              "
+            ></div>
+
+            <div
+              class="invoices-pdf-signature-container"
+              style="border-bottom: 1px solid #9a9a9a"
+            ></div>
+          </td>
+          <td></td>
+        </tr>
+        <!-- Table Subheader END -->
+      </tbody>
+      <!-- Table BODY END -->
+    </table>
+  </div>
+  <!-- TABLE END -->
+</body>
+<!-- Body END -->
