@@ -55,7 +55,7 @@
   }
   .invoices-pdf-table__subheader--reference,
   .invoices-pdf-table__subheader--name {
-    padding: 20px 0;
+    padding: 16px 0;
   }
 
   .invoices-pdf-table__actions {
@@ -173,7 +173,7 @@
     pointer-events: none;
   }
   .invoices-pdf_top-padding {
-    padding-top: 35px;
+    padding-top: 15px;
   }
   .invoices-pdf_top-padding-20 {
     padding-top: 15px;
@@ -186,7 +186,7 @@
   <div id="invoices-pdf-container" class="invoices-pdf-container">
     <table
       class="invoices-pdf-table"
-      cellpadding="15"
+      cellpadding="0"
       cellspacing="0"
       width="650"
       style="margin: auto; overflow-y: hidden; border: 1px solid black"
@@ -213,8 +213,6 @@
             <h3 style="text-align: right; font-size: 16px" class="invoices-pdf--block invoices-pdf--black">Atlanta, GA 30312</h3>
           </td>
         </tr>
-
-        <!-- Table Header -->
 
         <!-- Invoices Table START -->
         <tr>
@@ -280,52 +278,25 @@
               >
                 <tbody>
                   <tr>
-                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="55%">Invoice Description</th>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="55%">Items</th>
                     <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header">Amount</th>
                   </tr>
                   <tr>
-                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%">Subscription Fee (Browser Plan)</td>
-                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Total Fees Amount:formatted as $1028.58</td>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%">Parent group's Invoice's Fees:each item's Name EN</td>
+                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Fees:each item's Amount:formatted as $1,028.58</td>
                   </tr>
-                  <tr>
-                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%">Credit Card Fee (2.9% + 0.3 USD)</td>
-                    <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">Parent group's Invoice's Credit Card Fee Amount:formatted as $1028.58</td>
-                  </tr>
-                  <tr>
                     <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black" width="55%"> </td>
                     <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black"> </td>
                   </tr>
                   <tr>
-                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="50%">Total Amount</th>
-                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header">Parent group's Invoice's Total Amount:formatted as $1028.58</th>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header" width="50%">Total</th>
+                    <th class="invoices-pdf--text-left invoices-pdf--black invoices-pdf__table-header">Parent group's Invoice's Fees:each item's Amount:sum:formatted as $1,028.58</th>
                   </tr>
                 </tbody>
               </table>
             </td>
         </tr>
-        Parent group's Buyer Order's Order_Incoterms:count > 0:formatted as text
         <!-- Invoices Table END -->
-       <tr class="invoices-pdf-signature-main" style="display: none">
-          <td width="auto" style="padding-top: 40px">
-            <div
-              class="invoices-pdf-signature"
-              style="
-                display: inline-block;
-                margin-bottom: 5px;
-                color: black;
-                font-family: 'Caveat', cursive;
-                font-size: 26px;
-              "
-            ></div>
-
-            <div
-              class="invoices-pdf-signature-container"
-              style="border-bottom: 1px solid #9a9a9a"
-            ></div>
-          </td>
-          <td></td>
-        </tr>
-        <!-- Table Subheader END -->
       </tbody>
       <!-- Table BODY END -->
     </table>
